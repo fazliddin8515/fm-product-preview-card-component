@@ -17,6 +17,18 @@ body {
   background-color: var(--clr-white);
 }
 
+.perfume__img {
+  display: block;
+  position: relative;
+}
+
+.perfume__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
 .perfume__content {
   display: flex;
   flex-direction: column;
