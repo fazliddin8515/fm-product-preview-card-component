@@ -4,9 +4,9 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/qr-code-component-Y5yiODj9Su](https://www.frontendmentor.io/solutions/qr-code-component-Y5yiODj9Su)
-- Live Site URL: [https://fazliddin8515.github.io/fm-qr-component](https://fazliddin8515.github.io/fm-qr-component)
-- Source Code URL: [https://github.com/fazliddin8515/fm-qr-component](https://github.com/fazliddin8515/fm-qr-component)
+- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component-3Rz__Eujv8](https://www.frontendmentor.io/solutions/product-preview-card-component-3Rz__Eujv8)
+- Live Site URL: [https://fazliddin8515.github.io/fm-product-preview-card-component](https://fazliddin8515.github.io/fm-product-preview-card-component)
+- Source Code URL: [https://github.com/fazliddin8515/fm-product-preview-card-component](https://github.com/fazliddin8515/fm-product-preview-card-component)
 
 ## My process
 
