@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main class="perfume">
+      <picture class="perfume__img">
+        <source
+          srcset="./images/image-product-desktop.jpg"
+          media="(width >= 48em)"
+        />
+        <img
+          src="./images/image-product-mobile.jpg"
+          alt="product image"
+          width="350"
+          height="342"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+
+      <div class="perfume__content">
+        <div class="perfume__header">
+          <h1 class="perfume__heading">Gabrielle Essence Eau De Parfum</h1>
+          <span class="perfume__label">Perfume</span>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+        </div>
+
+        <div class="perfume__price">
+          <strong class="perfume__current-price">$149.99</strong>
+          <span class="perfume__old-price">$169.99</span>
+        </div>
+
+        <button class="perfume__cart-btn">
+          <img src="./images/icon-cart.svg" alt="icon cart image" />
+          <span>Add to Cart</span>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
