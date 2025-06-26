@@ -1,0 +1,188 @@
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  --space-50: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+
+  --radius-lg: var(--space-100);
+
+  --font-family-sans: "Montserrat", sans-serif;
+  --font-family-serif: "Fraunces", serif;
+
+  --font-size-32: 32px;
+  --font-size-14: 14px;
+  --font-size-13: 13px;
+  --font-size-12: 12px;
+
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  --line-height-10: 1;
+  --line-height-11: 1.1;
+  --line-height-12: 1.2;
+  --line-height-16: 1.6;
+
+  --letter-spacing-plus-5: 5px;
+
+  --color-text-default: var(--grey);
+  --color-text-heading: var(--black);
+  --color-text-primary: var(--green-500);
+  --color-text-button: var(--white);
+
+  --text-preset-1: var(--font-weight-700) var(--font-size-32) /
+    var(--line-height-10) var(--font-family-serif);
+  --text-preset-2: var(--font-weight-700) var(--font-size-14) /
+    var(--line-height-11) var(--font-family-sans);
+  --text-preset-3: var(--font-weight-500) var(--font-size-14) /
+    var(--line-height-16) var(--font-family-sans);
+  --text-preset-4: var(--font-weight-500) var(--font-size-12) /
+    var(--line-height-12) var(--font-family-sans);
+  --text-preset-5: var(--font-weight-500) var(--font-size-13) /
+    var(--line-height-12) var(--font-family-sans);
+
+  --color-background-default: var(--cream);
+  --color-background-primary: var(--green-500);
+  --color-background-primary-hover: var(--green-700);
+  --color-background-card: var(--white);
+
+  --max-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background-default);
+  color: var(--color-text-default);
+  font: var(--text-preset-3);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h2 {
+  color: var(--color-text-heading);
+  font: var(--text-preset-1);
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  --cluster-justify: center;
+  --cluster-space: var(--space-100);
+  cursor: pointer;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-button);
+  font: var(--text-preset-2);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-200);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-background-primary-hover);
+  }
+
+  &[data-fullwidth] {
+    inline-size: 100%;
+  }
+
+  svg * {
+    fill: currentColor;
+  }
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-300));
+}
+
+.challenge-wrapper {
+  --_max-width: var(--max-width, 320px);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-300)
+    max(var(--space-150), calc(50% - var(--_max-width) / 2));
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-space, var(--space-200));
+  justify-content: var(--cluster-justify, start);
+  align-items: var(--cluster-align, center);
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gutter, 0);
+  align-items: var(--switcher-vertical-alignment, flex-start);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(
+    (var(--switcher-target-container-width, 500px) - 100%) * 999
+  );
+}
+
+.product {
+  --switcher-target-container-width: 476px;
+  --switcher-vertical-alignment: stretch;
+  background-color: var(--color-background-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.product__image {
+  img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+}
+
+.product__content {
+  padding: var(--space-400);
+}
+
+.eyebrow {
+  font: var(--text-preset-4);
+  letter-spacing: var(--letter-spacing-plus-5);
+  text-transform: uppercase;
+}
+
+.price {
+  font: var(--text-preset-1);
+  color: var(--color-text-primary);
+
+  s {
+    font: var(--text-preset-5);
+    color: var(--color-text-default);
+  }
+
+  @media (min-width: 500px) {
+    &,
+    & + * {
+      --flow-space: var(--space-400);
+    }
+  }
+}
